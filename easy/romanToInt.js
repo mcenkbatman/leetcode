@@ -1,3 +1,5 @@
+const test = require('../utils/test');
+
 /**
  * Symbol       Value
     I             1
@@ -63,11 +65,11 @@ var romanToInt = function(s) {
   return result;
 };
 
-const test = (input) => {
-  console.time('runTime');
-  const result = romanToInt(input);
-  console.timeEnd('runTime');
-  console.log(result);
-};
+// const test = (input) => {
+//   console.time('runTime');
+//   const result = romanToInt(input);
+//   console.timeEnd('runTime');
+//   console.log(result);
+// };
 
-test('DM');
+test('DM', romanToInt);
