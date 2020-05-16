@@ -32,5 +32,25 @@ const longestCommonPrefix = (strs) => {
   return result;
 };
 
+/**
+ * @param {string[]} strs
+ * @return {string}
+ */
+const longestCommonPrefixV2 = (strs) => {
+  if (!strs || strs.length === 0) return '';
+  let result = strs[0];
+  let resultLen = result.length;
+  const length = strs.length;
+  for ( let i = 1; i < length; i++ ) {
+    if (!strs[i].startsWith(result)) {
+      if (resultLen === 1) return '';
+      resultLen--;
+      result = result.substr(0, resultLen);
+      i--;
+    }
+  }
+  return result;
+};
+
 const input = ["aa","a"];
 test(input, longestCommonPrefix);
