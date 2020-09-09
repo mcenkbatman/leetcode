@@ -3,7 +3,7 @@
  * https://leetcode.com/problems/longest-common-prefix/
  */
 
-const test = require('../utils/test');
+const { test } = require('../utils/test');
 
 const longestCommonBetweenTwo = (first, second) => {
   const minLen = Math.min(first.length, second.length);
